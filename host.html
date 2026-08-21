@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Host Session | SyncSound</title>
+
+    <link rel="stylesheet"
+          href="style.css">
+
+</head>
+
+<body>
+
+    <div class="hostContainer">
+
+        <div class="hostCard">
+
+            <h1>🎉 Session Created</h1>
+
+            <p>
+
+                Share this Session ID with your friend.
+
+            </p>
+
+            <div class="sessionBox">
+
+                <span>Session ID</span>
+
+                <h2 id="sessionID">
+
+                    SYNC0000
+
+                </h2>
+
+            </div>
+
+            <button id="copyBtn">
+
+                📋 Copy Session ID
+
+            </button>
+
+            <div class="statusBox">
+
+                <p id="status">
+
+                    ⏳ Waiting for player to join...
+
+                </p>
+
+            </div>
+
+            <div id="requestSection"
+                 class="requestSection"
+                 style="display:none;">
+
+                <h3>
+
+                    🎧 Join Request Received
+
+                </h3>
+
+                <p>
+
+                    A player wants to join your session.
+
+                </p>
+
+                <div class="requestButtons">
+
+                    <button id="acceptBtn">
+
+                        ✅ Accept
+
+                    </button>
+
+                    <button id="rejectBtn">
+
+                        ❌ Reject
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script type="module"
+            src="host.js">
+    </script>
+
+</body>
+
+</html>

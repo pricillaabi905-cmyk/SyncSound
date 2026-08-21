@@ -1,0 +1,787 @@
+/* ==========================
+   SyncSound v5
+========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Segoe UI,Arial,sans-serif;
+}
+
+body{
+
+    background:#0f172a;
+
+    color:white;
+
+    min-height:100vh;
+
+}
+
+/* ==========================
+   HEADER
+========================== */
+
+.topBar{
+
+    width:100%;
+
+    padding:25px 50px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    background:#111827;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.3);
+
+}
+
+.logoSection h1{
+
+    font-size:40px;
+
+    color:#60a5fa;
+
+}
+
+.logoSection p{
+
+    margin-top:5px;
+
+    color:#9ca3af;
+
+}
+
+.sessionSection{
+
+    display:flex;
+
+    gap:15px;
+
+    flex-wrap:wrap;
+
+}
+
+.sessionSection span{
+
+    background:#1f2937;
+
+    padding:12px 20px;
+
+    border-radius:30px;
+
+    font-size:16px;
+
+}
+
+#roleBadge{
+
+    background:#16a34a;
+
+}
+
+/* ==========================
+   MAIN
+========================== */
+
+.mainContainer{
+
+    max-width:1400px;
+
+    margin:40px auto;
+
+    display:grid;
+
+    grid-template-columns:320px 1fr;
+
+    gap:35px;
+
+    padding:0 20px;
+
+}
+
+/* ==========================
+   PLAYLIST
+========================== */
+
+.playlistPanel{
+
+    background:#1e293b;
+
+    border-radius:20px;
+
+    padding:25px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.35);
+
+}
+
+.playlistPanel h2{
+
+    margin-bottom:25px;
+
+}
+
+#songUrl{
+
+    width:100%;
+
+    padding:14px;
+
+    border:none;
+
+    border-radius:10px;
+
+    margin-bottom:15px;
+
+    font-size:16px;
+
+}
+
+.playlistButtons{
+
+    margin-top:20px;
+
+}
+
+.playlistButtons button{
+
+    margin-top:12px;
+
+}
+
+/* ==========================
+   PLAYER
+========================== */
+
+.playerPanel{
+
+    background:#1e293b;
+
+    border-radius:20px;
+
+    padding:35px;
+
+    text-align:center;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.35);
+
+}
+
+.coverContainer{
+
+    display:flex;
+
+    justify-content:center;
+
+}
+
+#albumArt{
+
+    width:320px;
+
+    height:320px;
+
+    object-fit:cover;
+
+    border-radius:20px;
+
+    box-shadow:0 20px 40px rgba(0,0,0,.4);
+
+}
+
+#songTitle{
+
+    margin-top:25px;
+
+    font-size:34px;
+
+}
+
+#artistName{
+
+    color:#cbd5e1;
+
+    margin-top:8px;
+
+    margin-bottom:30px;
+
+    font-size:20px;
+
+}
+
+#audioPlayer{
+
+    width:100%;
+
+    margin-bottom:35px;
+
+}
+
+/* ==========================
+   BUTTONS
+========================== */
+
+button{
+
+    width:100%;
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#2563eb;
+
+    color:white;
+
+    font-size:18px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+button:hover{
+
+    background:#3b82f6;
+
+    transform:translateY(-2px);
+
+}
+
+.playerButtons{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:15px;
+
+}
+
+/* ==========================
+   FOOTER
+========================== */
+
+footer{
+
+    text-align:center;
+
+    padding:30px;
+
+}
+
+#syncStatus{
+
+    color:#22c55e;
+
+    font-size:20px;
+
+}
+
+/* ==========================
+   MOBILE
+========================== */
+
+@media(max-width:900px){
+
+    .topBar{
+
+        flex-direction:column;
+
+        gap:20px;
+
+        text-align:center;
+
+        padding:25px;
+
+    }
+
+    .mainContainer{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .playerButtons{
+
+        grid-template-columns:1fr;
+
+    }
+
+    #albumArt{
+
+        width:220px;
+
+        height:220px;
+
+    }
+
+}
+/* ===========================================
+   HOME PAGE
+=========================================== */
+
+.homeContainer{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:30px;
+
+}
+
+.homeCard{
+
+    width:100%;
+
+    max-width:650px;
+
+    background:#1e293b;
+
+    border-radius:25px;
+
+    padding:50px;
+
+    text-align:center;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.35);
+
+}
+
+.logoArea h1{
+
+    font-size:55px;
+
+    color:#60a5fa;
+
+    margin-bottom:15px;
+
+}
+
+.logoArea p{
+
+    color:#cbd5e1;
+
+    font-size:20px;
+
+    line-height:1.7;
+
+    margin-bottom:40px;
+
+}
+
+.homeButtons{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:20px;
+
+}
+
+.homeButtons button{
+
+    padding:18px;
+
+    font-size:22px;
+
+    border-radius:15px;
+
+}
+
+.homeButtons button:hover{
+
+    transform:translateY(-3px);
+
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+    .homeCard{
+
+        padding:35px 25px;
+
+    }
+
+    .logoArea h1{
+
+        font-size:40px;
+
+    }
+
+    .logoArea p{
+
+        font-size:17px;
+
+    }
+
+    .homeButtons button{
+
+        font-size:18px;
+
+    }
+
+}
+/* ===========================================
+   JOIN PAGE
+=========================================== */
+
+.joinContainer{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:30px;
+
+}
+
+.joinCard{
+
+    width:100%;
+
+    max-width:550px;
+
+    background:#1e293b;
+
+    border-radius:25px;
+
+    padding:45px;
+
+    text-align:center;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.35);
+
+}
+
+.joinCard h1{
+
+    color:#60a5fa;
+
+    font-size:42px;
+
+    margin-bottom:15px;
+
+}
+
+.joinCard p{
+
+    color:#cbd5e1;
+
+    margin-bottom:30px;
+
+    font-size:18px;
+
+}
+
+.joinForm{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+}
+
+.joinForm label{
+
+    text-align:left;
+
+    font-weight:600;
+
+}
+
+.joinForm input{
+
+    padding:16px;
+
+    border:none;
+
+    border-radius:12px;
+
+    font-size:18px;
+
+    outline:none;
+
+}
+
+#joinStatus{
+
+    margin-top:25px;
+
+    font-size:18px;
+
+    color:#22c55e;
+
+}
+/* ===========================================
+   HOST PAGE
+=========================================== */
+
+.hostContainer{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:30px;
+
+}
+
+.hostCard{
+
+    width:100%;
+
+    max-width:650px;
+
+    background:#1e293b;
+
+    border-radius:25px;
+
+    padding:45px;
+
+    text-align:center;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.35);
+
+}
+
+.hostCard h1{
+
+    color:#60a5fa;
+
+    font-size:42px;
+
+    margin-bottom:15px;
+
+}
+
+.hostCard p{
+
+    color:#cbd5e1;
+
+    margin-bottom:25px;
+
+}
+
+.sessionBox{
+
+    background:#0f172a;
+
+    border-radius:18px;
+
+    padding:20px;
+
+    margin:25px 0;
+
+}
+
+.sessionBox span{
+
+    color:#94a3b8;
+
+    font-size:16px;
+
+}
+
+.sessionBox h2{
+
+    margin-top:10px;
+
+    color:#22c55e;
+
+    font-size:38px;
+
+    letter-spacing:2px;
+
+}
+
+.statusBox{
+
+    margin-top:25px;
+
+    padding:18px;
+
+    background:#111827;
+
+    border-radius:15px;
+
+}
+
+.requestSection{
+
+    margin-top:30px;
+
+    background:#111827;
+
+    border-radius:18px;
+
+    padding:25px;
+
+}
+
+.requestSection h3{
+
+    margin-bottom:10px;
+
+}
+
+.requestButtons{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:15px;
+
+    margin-top:20px;
+
+}
+
+#acceptBtn{
+
+    background:#16a34a;
+
+}
+
+#acceptBtn:hover{
+
+    background:#22c55e;
+
+}
+
+#rejectBtn{
+
+    background:#dc2626;
+
+}
+
+#rejectBtn:hover{
+
+    background:#ef4444;
+
+}
+
+@media(max-width:700px){
+
+    .requestButtons{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+/* ===========================================
+   CREATE PAGE
+=========================================== */
+
+.createContainer{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:30px;
+
+}
+
+.createCard{
+
+    width:100%;
+
+    max-width:600px;
+
+    background:#1e293b;
+
+    border-radius:25px;
+
+    padding:45px;
+
+    text-align:center;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.35);
+
+}
+
+.createCard h1{
+
+    color:#60a5fa;
+
+    font-size:42px;
+
+    margin-bottom:15px;
+
+}
+
+.createCard p{
+
+    color:#cbd5e1;
+
+    margin-bottom:30px;
+
+}
+
+.createForm{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+}
+
+.createForm label{
+
+    text-align:left;
+
+    font-weight:600;
+
+}
+
+.createForm input,
+.createForm select{
+
+    width:100%;
+
+    padding:16px;
+
+    border:none;
+
+    border-radius:12px;
+
+    font-size:17px;
+
+    outline:none;
+
+}

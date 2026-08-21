@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>SyncSound</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <!-- ===========================
+         HEADER
+    ============================ -->
+
+    <header class="topBar">
+
+        <div class="logoSection">
+
+            <h1>🎵 SyncSound</h1>
+
+            <p>Listen Together • Anywhere</p>
+
+        </div>
+
+        <div class="sessionSection">
+
+    <span id="roleBadge">
+        🟢 Host
+    </span>
+
+    <span id="sessionNameText">
+        🎵 Loading Session...
+    </span>
+
+    <span>
+        🆔
+        <b id="sessionIDText">
+            ----
+        </b>
+    </span>
+
+    <span id="userCount">
+        👥 Users : 1
+    </span>
+
+</div>
+
+    </header>
+
+    <!-- ===========================
+         MAIN
+    ============================ -->
+
+    <main class="mainContainer">
+
+        <!-- =====================
+             PLAYLIST
+        ====================== -->
+
+        <aside
+            class="playlistPanel"
+            id="hostControls">
+
+            <h2>
+
+                Playlist
+
+            </h2>
+
+            <input
+
+                type="text"
+
+                id="songUrl"
+
+                placeholder="Paste MP3 URL">
+
+            <button id="loadSongBtn">
+
+                Load Song
+
+            </button>
+
+            <div class="playlistButtons">
+
+                <button id="song1Btn">
+
+                    🎵 Song 1
+
+                </button>
+
+                <button id="song2Btn">
+
+                    🎵 Song 2
+
+                </button>
+
+                <button id="song3Btn">
+
+                    🎵 Song 3
+
+                </button>
+
+            </div>
+
+        </aside>
+
+        <!-- =====================
+             PLAYER
+        ====================== -->
+
+        <section class="playerPanel">
+
+            <div class="coverContainer">
+
+                <img
+
+                    id="albumArt"
+
+                    src="https://picsum.photos/500"
+
+                    alt="Album Cover">
+
+            </div>
+
+            <h2 id="songTitle">
+
+                SyncSound Demo
+
+            </h2>
+
+            <p id="artistName">
+
+                Unknown Artist
+
+            </p>
+
+            <audio
+
+                id="audioPlayer"
+
+                controls>
+
+            </audio>
+
+            <div class="playerButtons">
+
+                <button id="prevBtn">
+
+                    ⏮ Previous
+
+                </button>
+
+                <button id="playBtn">
+
+                    ▶ Play
+
+                </button>
+
+                <button id="pauseBtn">
+
+                    ⏸ Pause
+
+                </button>
+
+                <button id="nextBtn">
+
+                    ⏭ Next
+
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- ===========================
+         STATUS
+    ============================ -->
+
+    <footer>
+
+        <p id="syncStatus">
+
+            Waiting...
+
+        </p>
+
+    </footer>
+
+    <script
+        type="module"
+        src="music.js">
+    </script>
+
+</body>
+
+</html>
